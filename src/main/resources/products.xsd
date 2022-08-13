@@ -1,0 +1,33 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="demo.example.com/soap"
+           targetNamespace="demo.example.com/soap"
+           elementFormDefault="qualified">
+            <!-- 1. Create element in this schema to get product request -->
+                <xs:element name="deleteProductRequest">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="name" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            <!-- 2. Create element in this schema to get product response -->
+
+                <xs:element name="getProductResponse">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="product" type="tns:product" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+            <!-- Create the product response object and map it with the name of the product -->
+                <xs:complexType name="product">
+                    <xs:sequence>
+                        <xs:element name="name" type="xs:string" />
+                        <xs:element name="category" type="xs:string" />
+                        <xs:element name="price" type="xs:double" />
+                    </xs:sequence>
+                </xs:complexType>
+</xs:schema>
+
+

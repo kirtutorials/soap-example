@@ -1,0 +1,9 @@
+<soapenv:Envelope xmlns:soapenv="https://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:ps="demo.example.com/soap">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <ps:getProductRequest>
+            <ps:name>iphone</ps:name>
+        </ps:getProductRequest>
+    </soapenv:Body>
+</soapenv:Envelope>
